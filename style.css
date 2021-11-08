@@ -1,0 +1,12 @@
+.slick-list {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.my-shadow {
+  transition: 0.5s;
+}
+
+.my-shadow:hover {
+  box-shadow: 15px 15px 30px #8888885b;
+}
