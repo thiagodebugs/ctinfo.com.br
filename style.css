@@ -12,7 +12,23 @@
 }
 
 textarea {
+  height: 100px !important;
   resize: none;
+}
+
+.form-control {
+  border: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0px;
+}
+
+.form-control:focus,
+.is-invalid:focus {
+  box-shadow: none !important;
+}
+
+.nav-link:hover {
+  color: black !important;
 }
 
 @media (max-width: 480px) {

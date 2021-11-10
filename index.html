@@ -36,7 +36,7 @@
   <body class="bg-light">
     <!-- NAV-BAR -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-light navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="/index.html">
             <picture>
@@ -53,23 +53,34 @@
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavAltMarkup"
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
           >
-            <div class="navbar-nav">
-              <a class="nav-link" href="/index.html">Inicio</a>
-              <a class="nav-link" href="/pages/sobre.html">Sobre</a>
-              <a class="nav-link" href="/pages/contato.html">Contato</a>
-              <a class="nav-link" href="/pages/suporte.html">Suporte</a>
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <a class="nav-link" href="/index.html">Inicio</a>
+                <a class="nav-link" href="/pages/sobre.html">Sobre</a>
+                <a class="nav-link" href="/pages/contato.html">Contato</a>
+                <a class="nav-link" href="/pages/suporte.html">Suporte</a>
+              </div>
             </div>
           </div>
         </div>
@@ -294,7 +305,7 @@
     <section class="py-5 border-top border-1">
       <div class="container">
         <div class="row">
-          <div class="col-10 col-md-7 col-lg-5 m-auto">
+          <div class="col-10 col-md-6 col-lg-4 m-auto">
             <div class="card my-shadow">
               <img
                 src="/img/others/contact/contact-450.jpg"
@@ -306,48 +317,61 @@
                   <h2>Entre em contato!</h2>
                 </div>
                 <form class="form-contato">
-                  <div class="alert alert-danger my-3 d-none">
+                  <!-- ERROR -->
+                  <div class="alert alert-danger d-none">
                     Preencha o campo <span class="field-error"></span>!
                   </div>
-                  <div class="form-group my-3">
-                    <label for="name">Nome:</label>
+
+                  <!-- NAME -->
+                  <div class="form-floating">
                     <input
                       class="form-control"
                       type="text"
                       name="name"
-                      placeholder="Digite o seu nome..."
+                      placeholder="Digite seu nome..."
                     />
+                    <label for="name">Nome</label>
                   </div>
-                  <div class="form-group my-3">
-                    <label for="email">E-mail:</label>
+
+                  <!-- E-MAIL -->
+                  <div class="form-floating">
                     <input
                       class="form-control"
                       type="email"
                       name="email"
-                      placeholder="Digite o seu e-mail..."
+                      placeholder="Digite seu e-mail..."
                     />
+                    <label for="email">E-mail</label>
                   </div>
-                  <div class="form-group my-3">
-                    <label for="tel">Telefone:</label>
+
+                  <!-- TEL -->
+                  <div class="form-floating">
                     <input
                       class="form-control"
                       type="tel"
                       name="tel"
-                      placeholder="Digite o seu telefone..."
+                      placeholder="Digite seu telefone..."
                     />
+                    <label for="tel">Telefone</label>
                   </div>
-                  <div class="form-group my-3">
-                    <label for="message">Mensagem:</label>
+
+                  <!-- MESSAGE -->
+                  <div class="form-floating">
                     <textarea
                       class="form-control"
-                      rows="3"
                       name="message"
-                      placeholder="Digite a mensagem..."
+                      placeholder="Descreva em que podemos ajudar..."
                     ></textarea>
+                    <label for="message">Mensagem</label>
                   </div>
-                  <div class="form-group text-center mt-4">
-                    <button type="submit" class="btn btn-primary px-5">
-                      ENVIAR
+
+                  <!-- SUBMIT -->
+                  <div class="form-group text-center mt-4 mb-2">
+                    <button
+                      type="submit"
+                      class="btn btn-outline-primary fw-bold w-100 py-2"
+                    >
+                      ENVIAR!
                     </button>
                   </div>
                 </form>
