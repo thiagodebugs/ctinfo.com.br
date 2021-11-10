@@ -11,6 +11,10 @@
   box-shadow: 15px 15px 30px #8888885b;
 }
 
+textarea {
+  resize: none;
+}
+
 @media (max-width: 480px) {
   .slick-list div {
     display: flex !important;

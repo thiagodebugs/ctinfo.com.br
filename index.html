@@ -34,6 +34,7 @@
   </head>
 
   <body class="bg-light">
+    <!-- NAV-BAR -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -75,6 +76,7 @@
       </nav>
     </header>
 
+    <!-- CAROUSEL -->
     <section>
       <div
         id="carouselExampleIndicators"
@@ -126,6 +128,7 @@
       </div>
     </section>
 
+    <!-- PRODUTIVIDADE -->
     <section class="py-5">
       <div class="container text-center">
         <h1 class="fw-bold">+ PRODUTIVIDADE</h1>
@@ -164,6 +167,7 @@
       </div>
     </section>
 
+    <!-- COMUNICAÇÃO -->
     <section class="py-5 border-top border-1">
       <div class="container text-center">
         <h1 class="fw-bold">+ COMUNICAÇÃO</h1>
@@ -202,6 +206,7 @@
       </div>
     </section>
 
+    <!-- SEGURANÇA -->
     <section class="py-5 border-top border-1">
       <div class="container text-center">
         <h1 class="fw-bold">+ SEGURANÇA</h1>
@@ -239,6 +244,7 @@
       </div>
     </section>
 
+    <!-- SINOP-MT -->
     <section class="py-5 border-top border-1">
       <div class="container text-center">
         <h3 class="fw-bold">Atendimento em Sinop-MT e região.</h3>
@@ -254,6 +260,7 @@
       </div>
     </section>
 
+    <!-- CLIENTES -->
     <section class="py-5 border-top border-1">
       <div class="container text-center">
         <h5 class="">Clientes CTInfo</h5>
@@ -283,6 +290,7 @@
       </div>
     </section>
 
+    <!-- FORM CONTATO -->
     <section class="py-5 border-top border-1">
       <div class="container">
         <div class="row">
@@ -297,9 +305,9 @@
                 <div class="text-center my-3">
                   <h2>Entre em contato!</h2>
                 </div>
-                <form>
+                <form class="form-contato">
                   <div class="alert alert-danger my-3 d-none">
-                    Preencha o campo "Nome:"
+                    Preencha o campo <span class="field-error"></span>!
                   </div>
                   <div class="form-group my-3">
                     <label for="name">Nome:</label>
@@ -307,7 +315,7 @@
                       class="form-control"
                       type="text"
                       name="name"
-                      placeholder="Nome Sobrenome"
+                      placeholder="Digite o seu nome..."
                     />
                   </div>
                   <div class="form-group my-3">
@@ -316,7 +324,7 @@
                       class="form-control"
                       type="email"
                       name="email"
-                      placeholder="nome@exemplo.com.br"
+                      placeholder="Digite o seu e-mail..."
                     />
                   </div>
                   <div class="form-group my-3">
@@ -325,15 +333,16 @@
                       class="form-control"
                       type="tel"
                       name="tel"
-                      placeholder="(00) 00000-0000"
+                      placeholder="Digite o seu telefone..."
                     />
                   </div>
                   <div class="form-group my-3">
                     <label for="message">Mensagem:</label>
                     <textarea
                       class="form-control"
+                      rows="3"
                       name="message"
-                      placeholder="Descreva em que podemos te ajudar..."
+                      placeholder="Digite a mensagem..."
                     ></textarea>
                   </div>
                   <div class="form-group text-center mt-4">
@@ -349,6 +358,7 @@
       </div>
     </section>
 
+    <!-- RODAPÉ -->
     <footer class="mt-5 py-5 bg-dark text-white">
       <div class="container">
         <h5>Creditos</h5>
