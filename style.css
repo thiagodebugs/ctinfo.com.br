@@ -36,6 +36,14 @@ textarea {
   color: white;
 }
 
+p {
+  margin: 0px !important;
+}
+
+.font-rights{
+  font-size: 10pt;
+}
+
 @media (max-width: 480px) {
   .slick-list div {
     display: flex !important;
