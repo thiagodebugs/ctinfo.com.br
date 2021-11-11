@@ -40,8 +40,9 @@ p {
   margin: 0px !important;
 }
 
-.font-rights{
+.font-rights {
   font-size: 10pt;
+  color: #ddd;
 }
 
 @media (max-width: 480px) {
