@@ -31,9 +31,20 @@ textarea {
   color: black !important;
 }
 
+.link-white {
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 480px) {
   .slick-list div {
     display: flex !important;
     justify-content: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mw-md-75 {
+    max-width: 75% !important;
   }
 }
