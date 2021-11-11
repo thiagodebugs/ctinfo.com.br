@@ -49,6 +49,9 @@
       property="og:image"
       content="https://ctinfo.com.br/img/logo/ctinfo-400.png"
     />
+
+    <!-- reCAPTCHA Google -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body class="bg-light">
@@ -65,7 +68,7 @@
               <img
                 style="max-width: 200px"
                 src="/img/logo/ctinfo-200.png"
-                alt="Logo"
+                alt="Logo CTInfo"
             /></picture>
           </a>
           <button
@@ -130,10 +133,14 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/img/carousel/1.jpg" class="d-block w-100" alt="..." />
+            <img src="/img/carousel/1.jpg" class="d-block w-100" alt="banner" />
           </div>
           <div class="carousel-item">
-            <img src="/img/carousel/2.jpeg" class="d-block w-100" alt="..." />
+            <img
+              src="/img/carousel/2.jpeg"
+              class="d-block w-100"
+              alt="banner"
+            />
           </div>
         </div>
         <button
@@ -213,7 +220,7 @@
               <img
                 class="img-fluid"
                 src="/img/others/comunicacao/comunicacao-600.png"
-                alt="Rede de computadores com acesso a internet."
+                alt="Central de comunicação de dados (DataCenter)"
               />
             </div>
             <div style="max-width: 500px" class="text-lg-start ms-lg-2 order-1">
@@ -251,7 +258,7 @@
               <img
                 class="img-fluid"
                 src="/img/others/seguranca/seguranca-600.png"
-                alt="Rede de computadores com acesso a internet."
+                alt="Desktop protegido contra crimes ciberneticos"
               />
             </div>
             <div style="max-width: 500px" class="text-lg-start ms-lg-2">
@@ -284,7 +291,7 @@
         <img
           class="img-fluid"
           src="/img/others/map/sinop-mt-500.png"
-          alt="Rede de computadores com acesso a internet."
+          alt="Mapa do Mato-Grosso destacando Sinop."
         />
       </div>
     </section>
@@ -295,25 +302,46 @@
         <h5 class="">Clientes CTInfo</h5>
         <div class="slick-list">
           <div>
-            <img src="/img/others/clients/default/curado-200.png" />
+            <img
+              src="/img/others/clients/default/curado-200.png"
+              alt="Curado Corretora de Seguros"
+            />
           </div>
           <div>
-            <img src="/img/others/clients/default/edf-200.png" />
+            <img
+              src="/img/others/clients/default/edf-200.png"
+              alt="EDF Norte Fluminense"
+            />
           </div>
           <div>
-            <img src="/img/others/clients/default/max-parts-200.png" />
+            <img
+              src="/img/others/clients/default/max-parts-200.png"
+              alt="MAX PARTS Componentes Automotivos"
+            />
           </div>
           <div>
-            <img src="/img/others/clients/default/sinop-energia-200.png" />
+            <img
+              src="/img/others/clients/default/sinop-energia-200.png"
+              alt="Sinop Energia"
+            />
           </div>
           <div>
-            <img src="/img/others/clients/default/spinelli-200.png" />
+            <img
+              src="/img/others/clients/default/spinelli-200.png"
+              alt="Spinelli Assessoria e Contabilidade"
+            />
           </div>
           <div>
-            <img src="/img/others/clients/default/yamaha-200.png" />
+            <img
+              src="/img/others/clients/default/yamaha-200.png"
+              alt="Pilotando Gostoso Concessionária Yamaha"
+            />
           </div>
           <div>
-            <img src="/img/others/clients/default/pgr-200.png" />
+            <img
+              src="/img/others/clients/default/pgr-200.png"
+              alt="PGR Primordial Gestão de Riscos"
+            />
           </div>
         </div>
       </div>
@@ -328,7 +356,7 @@
               <img
                 src="/img/others/contact/contact-450.jpg"
                 class="card-img-top"
-                alt=""
+                alt="Contado com a equipe CTInfo"
               />
               <div class="card-body">
                 <div class="text-center my-3">
@@ -383,6 +411,12 @@
                     <label for="message">Mensagem</label>
                   </div>
 
+                  <!-- reCAPTCHA -->
+                  <div
+                    class="g-recaptcha mt-4"
+                    data-sitekey="6LeiaiodAAAAAI4w3CYfEAQe9hNETE_vOA3uk7dx"
+                  ></div>
+
                   <!-- SUBMIT -->
                   <div class="form-group text-center mt-4 mb-2">
                     <button
@@ -414,7 +448,7 @@
                 <img
                   style="max-width: 200px"
                   src="/img/logo/ctinfo-branco-200.png"
-                  alt="Logo" /></picture
+                  alt="Logo CTInfo" /></picture
             ></a>
           </div>
           <div class="col-lg-4 my-3 my-md-0">
@@ -517,6 +551,12 @@
       src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"
       integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA="
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+      integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
 
     <!-- Slick JS -->
