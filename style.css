@@ -27,13 +27,13 @@ textarea {
   box-shadow: none !important;
 }
 
-.nav-link:hover {
+header .nav-link:hover {
   color: black !important;
 }
 
 .link-white {
   text-decoration: none;
-  color: white;
+  color: #eee;
 }
 
 p {
