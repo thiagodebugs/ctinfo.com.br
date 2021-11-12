@@ -80,6 +80,17 @@ $(".form-contato").submit(function () {
     return false;
   }
 
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      $("#response").removeClass("d-none");
+    }
+  };
+
+  let url = "/contact.php";
+  xhttp.open("POST", url, true);
+  xhttp.send;
+
   return true;
 });
 
