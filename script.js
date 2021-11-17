@@ -32,26 +32,41 @@ $(".slick-list").slick({
   ],
 });
 
-function sendForm() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    alert("Inciou");
-    if (this.readyState == 4 && this.status == 200) {
-      $("#response").removeClass("d-none");
-      alert("Certo!!");
-      return true;
-    } else {
-      console.log(this);
-      alert("Errado!!");
-      return false;
-    }
-  };
+$("[name=name]").blur(function () {
+  var name = $("[name=name]");
+  if (name.val() == "") {
+    name.addClass("is-invalid");
+  } else {
+    name.removeClass("is-invalid");
+  }
+});
 
-  let url = "http://localhost/contact.php";
-  xhttp.open("POST", url, true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("name=");
-}
+$("[name=email]").blur(function () {
+  var email = $("[name=email]");
+  if (email.val() == "") {
+    email.addClass("is-invalid");
+  } else {
+    email.removeClass("is-invalid");
+  }
+});
+
+$("[name=tel]").blur(function () {
+  var tel = $("[name=tel]");
+  if (tel.val() == "") {
+    tel.addClass("is-invalid");
+  } else {
+    tel.removeClass("is-invalid");
+  }
+});
+
+$("[name=message]").blur(function () {
+  var message = $("[name=message]");
+  if (message.val() == "") {
+    message.addClass("is-invalid");
+  } else {
+    message.removeClass("is-invalid");
+  }
+});
 
 $(".form-contato").submit(function () {
   var name = $("[name=name]");
@@ -67,36 +82,52 @@ $(".form-contato").submit(function () {
 
   //VALIDATION NAME
   if (name.val() == "") {
-    error.removeClass("d-none");
-    field.html("Nome");
-    name.focus();
+    swal("Ops...", 'Deve preencha o campo "Nome" antes de enviar.', "warning");
+    $(".swal-button").click(function () {
+      name.focus();
+    });
     name.addClass("is-invalid");
     return false;
   }
 
   //VALIDATION EMAIL
   if (email.val() == "") {
-    error.removeClass("d-none");
-    field.html("E-mail");
-    email.focus();
+    swal(
+      "Ops...",
+      'Deve preencha o campo "E-mail" antes de enviar.',
+      "warning"
+    );
+    $(".swal-button").click(function () {
+      email.focus();
+    });
     email.addClass("is-invalid");
     return false;
   }
 
   //VALIDATION TEL
   if (tel.val() == "") {
-    error.removeClass("d-none");
-    field.html("Telefone");
-    tel.focus();
+    swal(
+      "Ops...",
+      'Deve preencha o campo "Telefone" antes de enviar.',
+      "warning"
+    );
+    $(".swal-button").click(function () {
+      tel.focus();
+    });
     tel.addClass("is-invalid");
     return false;
   }
 
   //VALIDATION MESSAGE
   if (message.val() == "") {
-    error.removeClass("d-none");
-    field.html("Mensagem");
-    message.focus();
+    swal(
+      "Ops...",
+      'Deve preencha o campo "Mensagem" antes de enviar.',
+      "warning"
+    );
+    $(".swal-button").click(function () {
+      message.focus();
+    });
     message.addClass("is-invalid");
     return false;
   }
@@ -104,7 +135,11 @@ $(".form-contato").submit(function () {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      $("#response").removeClass("d-none");
+      swal("Show!", "Solicitação de contato enviado com sucesso!", "success");
+      name.val() = "";
+      email.val() = "";
+      tel.val() = "";
+      message.val() = "";
     }
   };
 
@@ -120,6 +155,12 @@ $(".form-contato").submit(function () {
       tel.val() +
       "&message=" +
       message.val()
+  );
+
+  swal(
+    "Vixi!",
+    "Tivemos um problema em processar sua solicitação de contato, estamos trabalhando para resolver isso o quanto antes!",
+    "error"
   );
 
   return false;

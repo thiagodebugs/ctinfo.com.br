@@ -13,12 +13,8 @@
             "\nMensagem: ".$message;
     $header = "From: Social Media <socialmedia@helptecnologia.net>";
 
-    if (mail($to, $subject, $body, $header)) {
-        return true;
-    } else {
-        return false;
-    }
+    mail($to, $subject, $body, $header);
     
-echo    "<h1>Humm..</h1>
+    echo "<h1>Humm..</h1>
         <p>Algo de errado não esta certo, click aqui para voltar para <a href='/'>CTInfo</a>.</p>";
 ?>
