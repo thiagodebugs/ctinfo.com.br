@@ -32,13 +32,34 @@ $(".slick-list").slick({
   ],
 });
 
+function sendForm() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    alert("Inciou");
+    if (this.readyState == 4 && this.status == 200) {
+      $("#response").removeClass("d-none");
+      alert("Certo!!");
+      return true;
+    } else {
+      console.log(this);
+      alert("Errado!!");
+      return false;
+    }
+  };
+
+  let url = "http://localhost/contact.php";
+  xhttp.open("POST", url, true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("name=");
+}
+
 $(".form-contato").submit(function () {
   var name = $("[name=name]");
   var email = $("[name=email]");
   var tel = $("[name=tel]");
   var message = $("[name=message]");
 
-  var error = $(".alert");
+  var error = $(".error");
   var field = $(".field-error");
 
   error.addClass("d-none");
@@ -89,9 +110,19 @@ $(".form-contato").submit(function () {
 
   let url = "/contact.php";
   xhttp.open("POST", url, true);
-  xhttp.send;
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(
+    "name=" +
+      name.val() +
+      "&email=" +
+      email.val() +
+      "tel=" +
+      tel.val() +
+      "message=" +
+      message.val()
+  );
 
-  return true;
+  return false;
 });
 
 var SPMaskBehavior = function (val) {
