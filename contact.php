@@ -8,9 +8,9 @@
     $to = "Social Media <socialmedia@helptecnologia.net>";
     $subject = "QUERO SER CLIENTE";
     $body = "Nome: ".$name.
-            "Email: ".$email.
-            "Telefone: ".$fone.
-            "Mensagem: ".$message;
+            "\nEmail: ".$email.
+            "\nTelefone: ".$tel.
+            "\nMensagem: ".$message;
     $header = "From: Social Media <socialmedia@helptecnologia.net>";
 
     if (mail($to, $subject, $body, $header)) {

@@ -116,9 +116,9 @@ $(".form-contato").submit(function () {
       name.val() +
       "&email=" +
       email.val() +
-      "tel=" +
+      "&tel=" +
       tel.val() +
-      "message=" +
+      "&message=" +
       message.val()
   );
 
