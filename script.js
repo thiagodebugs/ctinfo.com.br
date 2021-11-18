@@ -1,3 +1,4 @@
+/* CAROUSEL CLIENT'S | SLICK */
 $(".slick-list").slick({
   dots: true,
   infinite: true,
@@ -32,6 +33,7 @@ $(".slick-list").slick({
   ],
 });
 
+/* VALIDATION FORM */
 $("[name=name]").blur(function () {
   var name = $("[name=name]");
   if (name.val() == "") {
@@ -164,6 +166,7 @@ $(".form-contato").submit(function () {
   return false;
 });
 
+/* MASK INPUT TEL */
 var SPMaskBehavior = function (val) {
     return val.replace(/\D/g, "").length === 11
       ? "(00) 00000-0000"
