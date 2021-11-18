@@ -136,6 +136,12 @@ $(".form-contato").submit(function () {
       email.val("");
       tel.val("");
       message.val("");
+    } else if (this.readyState == 4 && this.status != 200) {
+      swal(
+        "Vixi!",
+        "Não foi possivel processar sua solicitação de contato, estamos trabalhando parra resolver isso o quanto antes.",
+        "error"
+      );
     }
   };
 
