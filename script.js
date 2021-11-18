@@ -74,10 +74,6 @@ $(".form-contato").submit(function () {
   var tel = $("[name=tel]");
   var message = $("[name=message]");
 
-  var error = $(".error");
-  var field = $(".field-error");
-
-  error.addClass("d-none");
   $(".is-invalid").removeClass("is-invalid");
 
   //VALIDATION NAME
@@ -136,10 +132,10 @@ $(".form-contato").submit(function () {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       swal("Show!", "Solicitação de contato enviado com sucesso!", "success");
-      name.val() = "";
-      email.val() = "";
-      tel.val() = "";
-      message.val() = "";
+      name.val("");
+      email.val("");
+      tel.val("");
+      message.val("");
     }
   };
 
@@ -155,12 +151,6 @@ $(".form-contato").submit(function () {
       tel.val() +
       "&message=" +
       message.val()
-  );
-
-  swal(
-    "Vixi!",
-    "Tivemos um problema em processar sua solicitação de contato, estamos trabalhando para resolver isso o quanto antes!",
-    "error"
   );
 
   return false;
