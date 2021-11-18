@@ -68,6 +68,8 @@ $("[name=message]").blur(function () {
   }
 });
 
+$(".g-recaptcha").addClass("d-none");
+
 $(".form-contato").submit(function () {
   var name = $("[name=name]");
   var email = $("[name=email]");
