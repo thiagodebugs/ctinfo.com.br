@@ -70,7 +70,7 @@ $("[name=message]").blur(function () {
   }
 });
 
-$(".g-recaptcha").addClass("d-none");
+$(".g-recaptcha").addClass("d-flex justify-content-center");
 
 $(".form-contato").submit(function () {
   var name = $("[name=name]");
@@ -165,6 +165,10 @@ $(".form-contato").submit(function () {
 
   return false;
 });
+
+let date = new Date().toLocaleDateString([], { year: "numeric" });
+
+$(".year").html(date);
 
 /* MASK INPUT TEL */
 var SPMaskBehavior = function (val) {
